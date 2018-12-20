@@ -3,7 +3,7 @@ import {
   ADD_TO_END,
   DELETE_FIRST,
   DELETE_LAST,
-} from '../actions';
+} from '../constants/actionTypes';
 import items from '../constants/items';
 
 const initialState = {

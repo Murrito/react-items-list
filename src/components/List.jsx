@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 import Item from './Item';
@@ -28,6 +29,10 @@ function List({ items, isList }) {
     </div>
   );
 }
+
+List.propTypes = {
+  isList: PropTypes.bool,
+};
 
 function mapState(state) {
   const { items } = state;

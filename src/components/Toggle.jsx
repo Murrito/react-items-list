@@ -1,6 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-export default function Toggle ({ isList, onToggle }) {
+function Toggle ({ isList, onToggle }) {
   return (
     <div className="right-align">
       <button
@@ -19,3 +20,10 @@ export default function Toggle ({ isList, onToggle }) {
     </div>
   );
 }
+
+Toggle.propTypes = {
+  isList: PropTypes.bool,
+  onToggle: PropTypes.func,
+};
+
+export default Toggle;

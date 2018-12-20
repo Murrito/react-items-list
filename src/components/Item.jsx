@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types'
 
 class Item extends React.Component {
   renderDescription() {
@@ -86,5 +87,11 @@ class Item extends React.Component {
     );
   }
 }
+
+Item.propTypes = {
+  isList: PropTypes.bool,
+  item: PropTypes.object,
+  number: PropTypes.number,
+};
 
 export default Item;
