@@ -11,6 +11,7 @@
     "react-scripts": "2.1.1",
     "redux": "^4.0.1"
   },
+  "homepage": "https://murrito.github.io/react",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

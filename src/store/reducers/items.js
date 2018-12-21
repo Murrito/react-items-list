@@ -15,18 +15,18 @@ export default function (state = initialState, action) {
     case ADD_TO_TOP:
       return {
         ...state,
-        items: !state.items.length ? [] : [
+        items: state.items[state.items.length - 1] ? [
           state.items[state.items.length - 1],
           ...state.items,
-        ],
+        ] : state.items,
       };
     case ADD_TO_END:
       return {
         ...state,
-        items: !state.items.length ? [] : [
+        items: action.item || state.items[0] ? [
           ...state.items,
-          state.items[0],
-        ],
+          action.item || state.items[0] || undefined,
+        ] : state.items,
       };
     case DELETE_FIRST:
       return {

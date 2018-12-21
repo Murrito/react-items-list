@@ -1,0 +1,22 @@
+.chip {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 24px;
+  padding: 6px 12px;
+  background-color: #eee;
+  border-radius: 2px;
+  margin-right: .5rem;
+
+  .close {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 18px;
+    margin-left: 8px;
+    cursor: pointer;
+    transition: color .2s ease;
+
+    &:hover {
+      color: map_get($colors, primary);
+    }
+  }
+}

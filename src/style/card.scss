@@ -1,0 +1,9 @@
+.card {
+  display: block;
+  width: 100%;
+  box-shadow: 2px 2px 5px transparentize(black, .8);
+
+  &__content {
+    padding: 1rem;
+  }
+}

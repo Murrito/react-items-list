@@ -1,48 +1,22 @@
+@import 'variables';
+@import 'grid';
+@import 'colors';
+@import 'button';
+@import 'form';
+@import 'text';
+@import 'card';
+@import 'chip';
+
+* {
+  box-sizing: border-box;
+}
+
+.divider {
+  border-bottom: 1px solid #ddd;
+  margin: 1rem auto;
+}
+
 .app {
-  .container {
-    padding: .5rem;
-  }
-
-  .row {
-    margin: -.5rem;
-    display: flex;
-    flex-wrap: wrap;
-
-    &.align-center {
-      align-items: center;
-    }
-
-    .col {
-      padding: .5rem;
-      float: none;
-      flex: auto;
-      margin-left: 0;
-
-      $columns: 12;
-      $sizes: (s, 0), (m, 601px), (l, 993px), (xl, 1201px);
-
-      @each $size, $width in $sizes {
-        @for $i from 1 through $columns {
-          @media only screen and (min-width: $width) {
-            &.#{$size}#{$i} {
-              max-width: #{100% / $columns * $i};
-            }
-            &.offset-#{$size}#{$i} {
-              margin-left: #{100% / $columns * $i};
-            }
-          }
-        }
-      }
-    }
-  }
-
-  .divider {
-    border-bottom: #f2f2f2;
-    margin: 1rem auto;
-  }
-
-  $directions: (t, top), (r, right), (b, bottom), (l, left);
-
   @each $key, $dir in $directions {
     .m#{$key}-0 {
       margin-#{$dir}: 0;
